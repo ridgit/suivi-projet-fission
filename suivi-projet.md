@@ -39,12 +39,11 @@ kubectl create namespace $FISSION_NAMESPACE
 kubectl create -k "github.com/fission/fission/crds/v1?ref=v1.20.2" # v1.20.2
 
 # Télécharger le fichier values.yaml depuis le dépôt GitHub
-curl -o values.yaml https://github.com/fission/fission-charts/blob/main/charts/fission-all/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/fission/fission-charts/main/charts/fission-all/values.yaml
 
 # Modifier le fichier values.yaml selon vos besoins, si nécessaire
 
-helm install --version v1.20.2 fission-charts/fission-all --namespace fission -f values.yaml
-
+helm install fission --version v1.20.2 --namespace $FISSION_NAMESPACE -f values.yaml fission-charts/fission-all
 ```
 Je vous invite également à comprendre d’abord comment on peut [gérer les installations avec Helm](https://helm.sh/docs/chart_template_guide/getting_started/#charts).
 
