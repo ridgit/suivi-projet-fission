@@ -48,7 +48,8 @@ helm install fission --version v1.20.2 --namespace $FISSION_NAMESPACE -f values.
 #Install the client CLI on Linux
 curl -Lo fission https://github.com/fission/fission/releases/download/v1.20.2/fission-v1.20.2-linux-amd64 && chmod +x fission && sudo mv fission /usr/local/bin/
 #Tester que fission marche bien
-fission check
+fission version  
+fission check  
 
 ```
 Je vous invite également à comprendre d’abord comment on peut [gérer les installations avec Helm](https://helm.sh/docs/chart_template_guide/getting_started/#charts).
