@@ -44,6 +44,12 @@ curl -o values.yaml https://raw.githubusercontent.com/fission/fission-charts/mai
 # Modifier le fichier values.yaml selon vos besoins, si nécessaire
 
 helm install fission --version v1.20.2 --namespace $FISSION_NAMESPACE -f values.yaml fission-charts/fission-all
+
+#Install the client CLI on Linux
+curl -Lo fission https://github.com/fission/fission/releases/download/v1.20.2/fission-v1.20.2-linux-amd64 && chmod +x fission && sudo mv fission /usr/local/bin/
+#Tester que fission marche bien
+fission check
+
 ```
 Je vous invite également à comprendre d’abord comment on peut [gérer les installations avec Helm](https://helm.sh/docs/chart_template_guide/getting_started/#charts).
 
