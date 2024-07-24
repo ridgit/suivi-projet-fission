@@ -52,7 +52,7 @@ fission version
 fission check  
 
 ```
-Suivez ce process pour [**Déinstaller** fission](https://fission.io/docs/installation/uninstallation/).  
+Suivez ce process pour [**Déinstaller** fission](https://fission.io/docs/installation/uninstallation/) si le besoin se fait sentir.  
 Je vous invite également à comprendre d’abord comment on peut [gérer les installations avec Helm](https://helm.sh/docs/chart_template_guide/getting_started/#charts).
 
 Ce tutoriel [youtube](https://youtu.be/mcTwkE3jnZc?si=1A6NxN1EJvhyn6bu) est également très informative sur le sujet (personnaliser l’installation d’un chart avec Helm).
