@@ -28,7 +28,25 @@ Passons à l’installation de fission
 **5-**[Deployer et exécuter](https://fission.io/docs/installation/#run-an-example) votre première fonction dans fission
 
 **6-**Ce qu’on vient de faire est une installation standard de fission, cependant et ça sera certainement le cas, si vous souhaiter personnaliser l’installation de fission afin que cela se conforme à vos besoin, Helm nous vient en aide en utilisant le fichier [values.yaml](https://github.com/fission/fission-charts/blob/main/charts/fission-all/values.yaml) d’installation de fission.
+Voici ce que j'ai fait : 
 
+```bash
+export FISSION_NAMESPACE="fission"
+kubectl create namespace $FISSION_NAMESPACE
+kubectl create -k "github.com/fission/fission/crds/v1?ref=v1.20.1"
+helm repo add fission-charts https://fission.github.io/fission-charts/
+helm repo update
+
+# Télécharger le fichier values.yaml depuis le dépôt GitHub
+curl -o values.yaml https://raw.githubusercontent.com/fission/fission-charts/main/charts/fission-all/values.yaml
+
+# Modifier le fichier values.yaml selon vos besoins, si nécessaire
+
+helm install --version v1.20.1 --namespace $FISSION_NAMESPACE fission \
+  -f values.yaml \
+  fission-charts/fission-all
+
+```
 Je vous invite également à comprendre d’abord comment on peut [gérer les installations avec Helm](https://helm.sh/docs/chart_template_guide/getting_started/#charts).
 
 Ce tutoriel [youtube](https://youtu.be/mcTwkE3jnZc?si=1A6NxN1EJvhyn6bu) est également très informative sur le sujet (personnaliser l’installation d’un chart avec Helm).
