@@ -27,7 +27,7 @@ Passons à l’installation de fission
 
 **5-**[Deployer et exécuter](https://fission.io/docs/installation/#run-an-example) votre première fonction dans fission
 
-**6-**Ce qu’on vient de faire est une installation standard de fission, cependant et ça sera certainement le cas, si vous souhaiter personnaliser l’installation de fission afin que cela se conforme à vos besoin, Helm nous vient en aide en utilisant le fichier [values.yaml](https://github.com/fission/fission-charts/blob/main/charts/fission-all/values.yaml) d’installation de fission.
+**6-**Ce qu’on vient de faire est une installation standard de fission, cependant et ça sera certainement le cas, si vous souhaiter personnaliser l’installation de fission afin que cela se conforme à vos besoin, Helm nous vient en aide en utilisant le fichier [values.yaml](https://github.com/fission/fission-charts/blob/main/charts/fission-all/values.yaml) d’installation de fission.  
 Voici ce que j'ai fait : 
 
 ```bash
