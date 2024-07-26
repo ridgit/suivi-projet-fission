@@ -80,7 +80,7 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 
 ```
-**#Etape 1 du projet : Utiliser terraform (IaC) pour déployer des fonctions sur fission**  
+#**Etape 1 du projet : Utiliser terraform (IaC) pour déployer des fonctions sur fission**  
 Prérequis :
 
     Un cluster Kubernetes opérationnel.
