@@ -49,7 +49,19 @@ helm install fission --version v1.20.2 --namespace $FISSION_NAMESPACE -f values.
 curl -Lo fission https://github.com/fission/fission/releases/download/v1.20.2/fission-v1.20.2-linux-amd64 && chmod +x fission && sudo mv fission /usr/local/bin/
 #Tester que fission marche bien
 fission version  
-fission check  
+fission check
+
+# .bashrc
+
+# Auto-complétion pour Minikube
+source <(minikube completion bash)
+
+# Auto-complétion pour Fission
+source <(fission completion bash)
+
+# Auto-complétion pour kubectl
+source <(kubectl completion bash)
+
 
 ```
 Suivez ce process pour [**Déinstaller** fission](https://fission.io/docs/installation/uninstallation/) si le besoin se fait sentir.  
@@ -59,4 +71,12 @@ Ce tutoriel [youtube](https://youtu.be/mcTwkE3jnZc?si=1A6NxN1EJvhyn6bu) est éga
 
 **Déploiement du dashboard kubernetes :**
 
-Le dashboard kubernetes n'est pas déployée par défaut. Pour le déployer, [exécutez commande](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#deploying-the-dashboard-ui)
+Le dashboard kubernetes n'est pas déployée par défaut. Pour le déployer, [exécutez commande](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#deploying-the-dashboard-ui)  
+
+**Installation de terraform**  
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+```
