@@ -80,6 +80,7 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 
 ```
+Pour vous familiariser avec les différentes commandes terraform, cette [documentation Harshicorp](https://developer.hashicorp.com/terraform/tutorials/cli/init) est très bien instructif. Cet [tutoriel vidéo youtube](https://www.youtube.com/watch?v=_6AITxe5iVc&list=PLn6POgpklwWrpWnv05paAdqbFbV6gApHx) est également est d'une aide très pratique
 #**Etape 1 du projet : Utiliser terraform (IaC) pour déployer des fonctions sur fission**  
 Prérequis :
 
