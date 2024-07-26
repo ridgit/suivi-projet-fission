@@ -81,6 +81,11 @@ sudo apt update && sudo apt install terraform
 
 ```
 **Etape 1 du projet : Utiliser terraform (IaC) pour déployer des fonctions sur fission**  
+Prérequis :
+
+    Un cluster Kubernetes opérationnel.
+    Fission installé sur le cluster Kubernetes.
+    Terraform installé sur votre machine de travail.
 -Terraform initialise un provider Kubernetes, crée un ConfigMap pour stocker le code de la fonction  
 à faire..........  
 -déploie un pod en utilisant un Deployment qui utilise ce ConfigMap  
