@@ -97,3 +97,6 @@ Prérequis :
 ##-génère une URL pour accéder à la fonction déployée.
 
 à faire..........  
+
+
+
